@@ -1,0 +1,32 @@
+{
+  "name": "flashcard-generator",
+  "version": "1.0.0",
+  "description": "App that gives questions on a flash card on one side and then the answer on the other side.",
+  "main": "BasicCard.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NosillaMarie/flashcard-generator.git"
+  },
+  "keywords": [
+    "flashcard",
+    "game",
+    "cloze",
+    "deletion",
+    "partial",
+    "text",
+    "full",
+    "text"
+  ],
+  "author": "Nosilla Marie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NosillaMarie/flashcard-generator/issues"
+  },
+  "homepage": "https://github.com/NosillaMarie/flashcard-generator#readme",
+  "dependencies": {
+    "chalk": "^2.1.0"
+  }
+}
