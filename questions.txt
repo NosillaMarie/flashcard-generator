@@ -1,0 +1,1 @@
+{"front":"Who is the President","back":"Trump"};{"fullText":"Donald Trump is the President.","partial":"_________ is the President.","cloze":"Donald Trump"};

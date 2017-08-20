@@ -19,6 +19,12 @@ inquirer.prompt([{
 ]).then(function (toPrint) {
     newBasicCard = new BasicCard(toPrint.front, toPrint.back);
     console.log(chalk.green(newBasicCard));
-})
+    
+    fs.appendFile('questions.txt', JSON.stringify(newBasicCard) + ';', function(err) {
+        if(err) {
+            console.log(chalk.red('err'));
+        }
+    });
+});
 
 module.exports = BasicCard;
