@@ -1,30 +1,36 @@
+//requires
 var inquirer = require('inquirer');
 var fs = require('fs');
 var chalk = require('chalk');
 
-var BasicCard = function (front, back) {
+//constructor function
+var BasicCard = function (front, back, ptint) {
     this.front = front;
     this.back = back;
+    this.print = function () {
+        console.log(chalk.bgCyan(this.front, this.back));
+    }
 };
-
-inquirer.prompt([{
-        type: 'input',
+//prompt for question & answer
+inquirer.prompt([
+    {
         name: 'front',
-        message: 'Enter question to be displayed on flash card.'
+        message: 'Please Enter a flashcard question: '
 }, {
-        type: 'input',
         name: 'back',
-        message: 'Enter answer to the question to display on the back of the flash card.'
+        message: 'Please enter the answer to your question: '
 }
 ]).then(function (toPrint) {
-    newBasicCard = new BasicCard(toPrint.front, toPrint.back);
-    console.log(chalk.green(newBasicCard));
-    
-    fs.appendFile('questions.txt', JSON.stringify(newBasicCard) + ';', function(err) {
-        if(err) {
-            console.log(chalk.red('err'));
+    var newBasicCard = new BasicCard(toPrint.front, toPrint.back);
+    //console front and back of BasicCard constructor flashcard.  This is not working it is returning [object, Object] and I'm ot sure why... it is printing everything correctly to the questions.txt though...
+    console.log(chalk.bgCyan(newBasicCard));
+    //add question and answer submission to question.txt file.    
+    fs.appendFile('questions.txt', JSON.stringify(newBasicCard) + ';', function (err) {
+        if (err) {
+            console.log(chalk.red(err));
         }
     });
 });
+
 
 module.exports = BasicCard;

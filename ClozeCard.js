@@ -26,8 +26,8 @@ inquirer.prompt([
         message: 'Deleted Cloze answer: '
     },
 ]).then(function (clozePrint) {
-    newCloze = new ClozeCard(clozePrint.fullText, clozePrint.partial, clozePrint.cloze);
-    console.log(chalk.magenta(newCloze));
+    var newCloze = new ClozeCard(clozePrint.fullText, clozePrint.partial, clozePrint.cloze);
+    console.log(chalk.bgMagenta(newCloze));
 
     fs.appendFile('questions.txt', JSON.stringify(newCloze) + ';', function (err) {
         if (err) {
