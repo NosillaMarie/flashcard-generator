@@ -1,0 +1,14 @@
+{
+  "front": "Do you know if you did this right?",
+  "back": "Nope"
+};
+{
+  "fullText": "Alex is the name of our teacher.",
+  "partial": "_______ is the name of our teacher.",
+  "cloze": "Alex"
+};
+{
+  "fullText": "sdf",
+  "partial": "sf",
+  "cloze": "sdf"
+};

@@ -27,7 +27,7 @@ inquirer.prompt([
     },
 ]).then(function (clozePrint) {
     var newCloze = new ClozeCard(clozePrint.fullText, clozePrint.partial, clozePrint.cloze);
-    console.log(chalk.bgMagenta(newCloze));
+//    console.log(chalk.bgMagenta(newCloze));
 
     fs.appendFile('questions.txt', JSON.stringify(newCloze, null, 2) + ';' + '\n', function (err) {
         if (err) {
