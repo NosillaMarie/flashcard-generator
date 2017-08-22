@@ -1,1 +1,0 @@
-{"fullText":"Today is Tuesday.","partial":"Today is _________","cloze":"Tuesday"};{"front":"How old is the United States?","back":"Old"};{"front":"Are we there yet?","back":"no"};{"front":"are we almost there","back":"yes"};{"front":"That sucks","back":"yes"};{"front":"This is annoying","back":"yes"};{"front":"We are now making a mess","back":"yes"};

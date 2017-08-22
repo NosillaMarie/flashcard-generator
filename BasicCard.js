@@ -4,12 +4,9 @@ var fs = require('fs');
 var chalk = require('chalk');
 
 //constructor function
-var BasicCard = function (front, back, ptint) {
+var BasicCard = function (front, back) {
     this.front = front;
     this.back = back;
-    this.print = function () {
-        console.log(chalk.bgCyan(this.front, this.back));
-    }
 };
 //prompt for question & answer
 inquirer.prompt([
@@ -22,10 +19,16 @@ inquirer.prompt([
 }
 ]).then(function (toPrint) {
     var newBasicCard = new BasicCard(toPrint.front, toPrint.back);
+    
+    
     //console front and back of BasicCard constructor flashcard.  This is not working it is returning [object, Object] and I'm ot sure why... it is printing everything correctly to the questions.txt though...
-    console.log(chalk.bgCyan(newBasicCard));
+//    console.log(chalk.bgCyan(newBasicCard));
+    
+    
+    
+    
     //add question and answer submission to question.txt file.    
-    fs.appendFile('questions.txt', JSON.stringify(newBasicCard) + ';', function (err) {
+    fs.appendFile('questions.txt', JSON.stringify(newBasicCard, null, 2) + ';' + "\n", function (err) {
         if (err) {
             console.log(chalk.red(err));
         }
